@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +8,17 @@
 </head>
 <body>
     <h1>Logar</h1>
-    <form method="POST" action="processa.php"> 
+    <form method="POST" action="banco_login/processa.php"> 
         <label>Usuario:</label>
         <input type="text" name="nome" placeholder="Nome de Usuario">
-</br>
-</br>
+        </br>
+        </br>
         <label>Senha:</label>
         <input type="password" name="senha " placeholder="Coloque sua senha">
         </br>
-</br>
-</br>
-        <input type="submit" value="Cadastrar">
+        </br>
+        </br>
+        <input type="submit" value="Logar">
 
     </form>
     
