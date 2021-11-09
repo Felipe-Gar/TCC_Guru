@@ -13,7 +13,7 @@
     
       <label>    Descrição</label>
       <br>
-      <input type="number" name="caixa" >
+      <input type="number" name="caixa" maxlength="3" >
       <input type="text" name="descricao" >
       <br>
       <input type="submit" value="cadastro">

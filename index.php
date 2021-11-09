@@ -10,7 +10,7 @@
 <body>
     <div id="corpo-form">
     <h1>Logar</h1>
-    <form method="POST" action="banco_login/processa.php"> 
+    <form method="POST" > 
         <label>Usuario:</label>
         <input type="text" name="nome" placeholder="Nome de Usuario">
         </br>
@@ -23,6 +23,21 @@
         <input type="submit" value="Logar">
     </div>  
     </form>
-    
+<?php
+   //verificar se clicou no botão
+     isset($_POST['nome'])
+     {
+         $nome = addslashes($_POST['nome']);
+         $senha = addslashes($_POST['senha']);
+         //verificar se esta vazio
+         if(!empty($nome) && !empty($senha)) 
+         {
+
+         }else
+         {
+             echo "Preencha todos os campos";
+         }
+     }
+?>    
 </body>
 </html>
