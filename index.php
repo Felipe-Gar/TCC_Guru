@@ -29,11 +29,11 @@ $u = new Usuario
     </form>
 <?php
  if(isset($_POST ['nome']))
- {
+ {         
      $nome = addslashes($_POST['nome']);
      $senha = addslashes($_POST['senha']);
      
-        if(!empty($nome) && !empty($senha))
+        if(!empty($nome) && !empty($senha))//verificar se o usuario apertou o botão
      {
 
            $u->conectar("deposito","localhost","root","");
@@ -42,7 +42,7 @@ $u = new Usuario
 
                if($u->logar($nome, $senha))
       {
-             header("principal.php");
+             header("location: principal.php");
          }else
        {
 

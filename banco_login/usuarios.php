@@ -34,7 +34,7 @@ Class Usuario
               return true ; //logado com sucesso
          }else{
               return false;//não foi possivel logar
-              header("location;../index.php");
+              header("location:../index.php");
          }
          
     }
