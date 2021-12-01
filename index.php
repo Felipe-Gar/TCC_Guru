@@ -1,7 +1,4 @@
-<?php
-require_once 'banco_login/usuarios.php';
-$u = new Usuario
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,7 +33,7 @@ $u = new Usuario
         if(!empty($nome) && !empty($senha))//verificar se o usuario apertou o botão
      {
 
-           $u->conectar("deposito","host","root","");
+           $u->conectar("system_guru","localhost","root","");
            if($u->msgERRO =="")
          {
 
