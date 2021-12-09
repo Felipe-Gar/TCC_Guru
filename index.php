@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,51 +9,42 @@
 </head>
 <body>
     <div id="corpo-form">
-    <h1>Logar</h1>
-    <form method="POST" > 
-        <label>Usuario:</label>
-        <input type="text" name="nome" placeholder="Nome de Usuario">
-        </br>
-        </br>
-        <label>Senha:</label>
-        <input type="password" name="senha" placeholder="Coloque sua senha">
-        </br>
-        </br>
-        </br>
-        <input type="submit" value="Logar">
-    </div>  
-    </form>
+      <h1>Logar</h1>
+      <form method="POST"> 
+          <label>Usuario:</label>
+          <input type="text" name="nome" placeholder="Nome de Usuario">
+          </br>
+          </br>
+          <label>Senha:</label>
+          <input type="password" name="senha" placeholder="Coloque sua senha">
+          </br>
+          </br>
+          </br>
+          <input type="submit" value="Logar">  
+      </form>
+    </div>
+    <!-- BLOCO DE PHP -->
 <?php
- if(isset($_POST ['nome']))
- {         
-     $nome = addslashes($_POST['nome']);
-     $senha = addslashes($_POST['senha']);
-     
-        if(!empty($nome) && !empty($senha))//verificar se o usuario apertou o botão
-     {
+require_once 'banco_login/usuarios.php';
+$u = new Usuario;
+if (isset($_POST['nome'])) { 
+  $nome = addslashes($_POST['nome']); 
+  $senha = addslashes($_POST['senha']);
 
-           $u->conectar("system_guru","localhost","root","");
-           if($u->msgERRO =="")
-         {
-
-               if($u->logar($nome, $senha))
-      {
-             header("location: principal.php");
-         }else
-       {
-
-          echo "Email e senha incorreto!";
-       }
-         }
-
-            else {
-          echo"Erro:".$u->msgERRO;
+  if (!empty($nome) && !empty($senha)) { 
+      $u->conectar("system_guru", "localhost", "root", ""); 
+      if ($u->msgERRO == "") { 
+          if ($u->logar($nome, $senha)) {
+              header("location: principal.php");
+          } else {                                        
+              echo "Usúario e/ou senha incorretos!";
           }
-    }
-       else
-     {
-         echo "preencha todos os campos";
-     }
+      } else {
+          echo "Erro: " . $u->msgERRO;
+      }
+  } else { 
+      echo "Preencha todos os campos!";
+  }
 }
 ?>
 </body>
