@@ -33,14 +33,14 @@ if (isset($_POST['nome'])) {
 
   if (!empty($nome) && !empty($senha)) { 
       $u->conectar("system_guru", "localhost", "root", ""); 
-      if ($u->msgERRO == "") { 
+      if ($u->msgErro == "") { 
           if ($u->logar($nome, $senha)) {
               header("location: principal.php");
           } else {                                        
               echo "Usúario e/ou senha incorretos!";
           }
       } else {
-          echo "Erro: " . $u->msgERRO;
+          echo "Erro: " . $u->msgErroO;
       }
   } else { 
       echo "Preencha todos os campos!";

@@ -26,6 +26,6 @@
       <br>
       <input type="submit" value="cadastro">
     </form>
-    
+
 </body>
 </html>
