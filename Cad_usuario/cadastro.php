@@ -1,7 +1,3 @@
-<?php
-require_once 'banco_login/usuarios.php';
-$u = new Usuario;
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,37 +18,40 @@ $u = new Usuario;
         <input type="number" name="nivel" placeholder="Indique o nivel" maxlength="2"><br><br>
         <input type="submit" value="Cadastrar">
     </form>
-    </body>
+</body>
+
 </html>
 
-    <?php
-    //verificar se clicou no botão 
-    if(isset($_POST['nome'])) {
-        $nome = addslashes($_POST['nome']);
-        $email = addslashes($_POST['email']);
-        $senha = addslashes($_POST['senha']);
-        $nivel = addslashes($_POST['nivel']);
-        $confirmarsenha = addslashes($_POST['confsenha']);
-        //verificar se o campo esta preenchido
-        if (!empty($nome) && !empty($email) && !empty($senha) && !empty($nivel) && !empty($confirmarsenha)) 
+<?php
+require_once '../banco_login/usuarios.php';
+$u = new Usuario;
+//verificar se clicou no botão 
+if (isset($_POST['nome'])) {
+    $nome = addslashes($_POST['nome']);
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['senha']);
+    $nivel = addslashes($_POST['nivel']);
+    $confirmarsenha = addslashes($_POST['confsenha']);
+    //verificar se o campo esta preenchido
+    if (!empty($nome) && !empty($email) && !empty($senha) && !empty($nivel) && !empty($confirmarsenha)) {
+        $u->conectar("system_guru", "localhost", "root", "");
+        if ($u->msgErro == "") //se esta tudo certo
         {
-            $u->conectar("system_guru", "localhost", "root", "");
-            if ($u->msgErro == "") //se esta tudo certo
-            {
-                if($senha == $confirmarsenha ) 
-                {
-                 
+            if ($senha == $confirmarsenha) {
+                if ($u->cadastrar($nome, $email, $senha, $nivel)) {
+                    echo "Cadastrado com sucesso ";
+                } else {
+                    echo "Email ja cadastrado ";
                 }
-            else 
-            {
-                echo "Erro:".$u->msgErro;
+            } else {
+                echo "Erro:" . $u->msgErro;
             }
         } else {
             echo "Preencha todos os campos ";
         }
+    } else {
+        echo "Voce não tem Cadastro";
     }
-        else{
-            echo "Voce não tem Cadastro";
-        }
-    }
-    ?>
+}
+
+?>
