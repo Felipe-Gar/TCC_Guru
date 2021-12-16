@@ -20,7 +20,7 @@ Class Usuario{
         global $msgErro;
 
         //verifica se o nome ja esta cadastrado
-        $sql = $pdo ->prepare("SELECT id_usuarios FROM usuarios WHERE nome = :n");
+        $sql = $pdo->prepare("SELECT id_usuarios FROM usuarios WHERE nome = :n");
         $sql->bindValue(":n",$nome);
         $sql->execute();
         if($sql->rowCount() > 0)
@@ -28,7 +28,7 @@ Class Usuario{
             return false;//ja esta cadastrado
         }
         //caso nao estiver cadastrado
-        $sql = $pdo->prepare("INSERT usuarios ($nome, $senha, $nivel, $email) VALUES (:n, :s, :i, :e)" );
+        $sql = $pdo->prepare("INSERT INTO usuarios ($nome, $email, $senha, $nivel) VALUES (:n, :e, :s, :i)");
         $sql->bindValue(":n",$nome);
         $sql->bindValue(":s",md5($senha));
         $sql->bindValue(":i",$nivel);
