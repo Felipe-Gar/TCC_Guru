@@ -1,5 +1,5 @@
 <?php
-
+require_once "../Cad_usuario/conexao.php";
 Class Produto {
     private $pdo;
     public $MsgErro = "";
@@ -44,7 +44,7 @@ public function cadastrar($nome, $descricao, $quant_estoque, $quant_minima, $cai
    public function buscar_dados(){//buscar e retornar os dados  
    global $pdo;
        $result = array();//se retorna vazio não der erro
-       $sql = $this->pdo->prepare("SELECT * FROM produto ORDER BY nome");
+       $sql = $this->$pdo->prepare("SELECT * FROM produto ORDER BY nome");
        $result = $sql->fetchAll(PDO::FETCH_ASSOC);
        return $result;
    }
