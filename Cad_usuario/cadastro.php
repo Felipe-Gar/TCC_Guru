@@ -1,3 +1,13 @@
+<?php
+include_once 'conexao.php';
+include_once '../banco_login/usuarios.php';
+ session_start();//Caso o usuario copiar a url ele ira ter que voltar para a tela de login
+   if(!isset($_SESSION['id_usuarios']))
+   {
+     header("location: ./index.php");
+     exit;
+   }
+     ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,12 +20,22 @@
 
 <body>
     <form method="POST">
-        <label>Cadastrar</label><br>
         <input type="text" name="nome" placeholder="Coloque o nome"><br><br>
         <input type="email" name="email" placeholder="Coloque seu email"><br><br>
         <input type="password" name="senha" placeholder="Crie uma senha "><br><br>
         <input type="password" name="confsenha" placeholder="Confirme sua senha"><br><br>
-        <input type="number" name="nivel" placeholder="Indique o nivel" maxlength="2"><br><br>
+        <select class = "form-select" name="nivel" aria-label="Default select example">
+            <option>Selecione</option>
+            <?php
+            $resultadoGrupo = "SELECT * FROM grupo_usuarios";
+            $re_grupo = mysqli_query($conn, $resultadoGrupo);
+            while($row_grupo = mysqli_fetch_assoc($re_grupo)){?> 
+            <option value ="<?php echo $row_grupo['nivel']?>">
+                <?php echo $row_grupo['nome_grupo'];?>
+            </option><?php
+            }
+            ?>
+        </select><br><br>
         <input type="submit" value="Cadastrar">
     </form>
 </body>
@@ -37,20 +57,20 @@ if (isset($_POST['nome'])) {
         $u->conectar("system_guru", "localhost", "root", "");
         if ($u->msgErro == "") //se esta tudo certo
         {
-            if ($senha == $confirmarsenha) {
+            if ($senha == $confirmarsenha) {//Ver se senha e confirmarsenha são iguais
                 if ($u->cadastrar($nome, $email, $senha, $nivel)) {
-                    echo "Cadastrado com sucesso ";
+                    echo "<script>alert('Cadastrado com Sucesso');</script> ";
                 } else {
                     echo "Email ja cadastrado ";
                 }
             } else {
-                echo "Erro:" . $u->msgErro;
+                echo "Senha e Confirmar senha não são as mesmas ";
             }
         } else {
-            echo "Preencha todos os campos ";
+            echo  "Erro:" . $u->msgErro;
         }
     } else {
-        echo "Voce não tem Cadastro";
+        echo "Preencha todos os campos";
     }
 }
 

@@ -26,24 +26,24 @@
     <!-- BLOCO DE PHP -->
 <?php
 require_once 'banco_login/usuarios.php';
+
 $u = new Usuario;
+
 if (isset($_POST['nome'])) { 
   $nome = addslashes($_POST['nome']); 
   $senha = addslashes($_POST['senha']);
 
-  if (!empty($nome) && !empty($senha)) { 
-      $u->conectar("system_guru", "localhost", "root", ""); 
-      if ($u->msgErro == "") { 
-          if ($u->logar($nome, $senha)) {
-              header("location: principal.php");
-          } else {                                        
-              echo "Usúario e/ou senha incorretos!";
+  if(!empty($nome) && !empty($senha)){
+      $u->conectar("system_guru", "localhost", "root", "");
+      if($u->msgErro == ""){
+          if(!$u->logar($nome, $senha)){
+              echo "Login errado!";
           }
-      } else {
-          echo "Erro: " . $u->msgErroO;
+      } else{
+          echo "Erro: " . $u->msgErro;
       }
-  } else { 
-      echo "Preencha todos os campos!";
+  } else{
+      echo "Preencha todos os campos obrigatórios!";
   }
 }
 ?>
