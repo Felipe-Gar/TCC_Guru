@@ -44,7 +44,7 @@
                  if($p->cadastrar($nome,  $descricao, $quant_estoque, $quant_minima, $caixa)){
                      echo "<script>alert('Cadastrado com Sucesso');</script>";
                  }else{
-                     echo "<script>alert('Cadastrado com Sucesso');</script>";
+                     echo "<script>alert('Este produto já foi cadastrado');</script>";
                  }
              }else{
                  echo"Erro:" . $u->msgErro;

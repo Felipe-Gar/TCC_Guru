@@ -52,11 +52,20 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
             <?php
             while ($row_usuario = mysqli_fetch_assoc($resultado_usu)) {
                 echo"<tr>";
+                echo"<tr><input type='hidden' value='$row_usuario[id_produto]'></tr>";
                 echo "<td>" . $row_usuario['numero_caixa'];
                 echo "<td>" . $row_usuario['nome'];
                 echo "<td>" . $row_usuario['descricao'];
                 echo "<td>" . $row_usuario['quant_estoque'];
-                echo "<td><a href='../PoderAdm/Editar.php?id_produto=$row_usuario[id_produto]'><button>Editar</button></a>";
+                echo "<td>
+                        <a href='../PoderAdm/Editar.php?id_produto=$row_usuario[id_produto]'>
+                            <button>Editar</button>
+                        </a>
+                        |
+                        <a href='../PoderAdm/proce_excluir.php?id_produto=". $row_usuario['id_produto'].  "'>
+                           <button>Excluir</button>
+                        </a>
+                        ";
                 echo "<hr>";
             }
             ?>
