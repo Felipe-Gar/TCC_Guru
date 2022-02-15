@@ -15,9 +15,9 @@
         <label >Cadastro Produto</label><br><br>
         <input type="text" name="nome" placeholder="Insira o nome do Produto"><br><br>
         <input type="text" name="descricao" placeholder="Insira uma descrição "><br><br>
-        <input type="number" name="quant_estoque" placeholder="Quantidade em estoque"><br><br>
-        <input type="number" name="quant_minima" placeholder="Quantidade minima"><br><br>
-        <input type="number" name="caixa" placeholder="Insira a caixa do produto"><br><br>
+        <input type="number" name="quant_estoque" placeholder="Quantidade em estoque" maxlength="4"><br><br>
+        <input type="number" name="quant_minima" placeholder="Quantidade minima" maxlength="2"><br><br>
+        <input type="number" name="caixa" placeholder="Insira a caixa do produto" maxlength="3"><br><br>
         <input type="submit" value="Cadastrar">
 
 
