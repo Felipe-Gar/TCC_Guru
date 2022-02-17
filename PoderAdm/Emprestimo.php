@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once("../banco_login/usuarios.php");
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ session_start();
         <h1>Pesquisar</h1>
         <form method="POST" id="form_pesquisa" action="">
             <label>Pesquisar</label>
-            <input type="text" name="pesquisa" placeholder="Digite o nome de usuario">
+            <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite o nome de usuario">
 
         </form>
         <ul class="resultado">
@@ -29,22 +30,24 @@ session_start();
     <div>
         <form>
             <div>
-                <table>
+                <table id="emprestimo">
                     <thead>
                         <tr>
                             <td>Caixa</td>
                             <td>Nome</td>
-                            <td>Descrição</td>
                             <td>Quantidade</td>
                             <td>Emprestimo</td>
+
                         </tr>
                     </thead>
+  
                 </table>
             </div>
             <div id="result">
+                
 
             </div>
-        </form>
+            <input type="submit" name="botao" value="Emprestar">
     </div>
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
