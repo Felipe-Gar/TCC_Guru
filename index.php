@@ -12,7 +12,7 @@
     <title>Login</title>
 </head>
 <body>
-<img src="./img/6.png" id="img2">
+<img src="img/6.png" id="img2">
     <form method="POST">
     <div class="container">
         <div class="usuario">
@@ -24,7 +24,7 @@
             <input type="password" name="senha" class="form-control" id="senha" placeholder="Digita sua senha">
            </div>
             <div class="" id="botao">
-            <input type="submit" name="botao" value="Logar" id="btn" class="btn btn-primary" >
+            <input type="submit" name="botao" value="ENTRAR" id="btn" class="btn btn-primary" >
            </div>
         </form>
 

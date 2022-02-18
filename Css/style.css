@@ -52,10 +52,11 @@ label{
     position: absolute;
     width: 80px;
     text-align: center;
-    padding: 0px 0px;
+    padding: 0px 50px;
     font-size: 18px;
     color:rgb(255, 255, 255);
     margin-top: 5%;
+    
     
     
 }
@@ -68,7 +69,7 @@ label{
     background-color:#7192ee ;
     font-size: 18px;
     color:rgb(255, 255, 255);
-    margin-left: -40px;
+    margin-left: -450px;
     
     
     
@@ -91,12 +92,12 @@ label{
 
 .link2{
     text-align: center;
-    margin-top: 8%;
+    margin-top: 11%;
     margin-left: 1250px;
 }
 #botao{
     margin-top: 50px;
-    margin-left: 460px;
+    margin-left: 470px;
     
 }
 /*Responsivo 1*/
