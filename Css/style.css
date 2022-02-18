@@ -1,0 +1,165 @@
+body{
+
+    background-repeat: no-repeat;
+    background-position: 400px -30px;
+    background-size: 35%;
+
+background: linear-gradient(#7192ee, #fefbff);
+background-attachment: fixed;
+
+}
+    
+
+
+
+input{
+    width: 100px;
+    padding: 10px;
+    }
+    h4{
+        text-align: center;
+    }
+.container{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+#nome{
+    width: 420px;
+    height: 50px;
+    margin-left: 15%;
+}
+
+#senha{
+    width: 420px;
+    height: 50px;
+    margin-left: 15%;
+}
+
+label{
+    margin-left: 40%;
+    font-size: 20px;
+}
+
+#labelsenha{
+    margin-top: 3%;
+
+
+}
+
+#botao{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    padding: 0px 0px;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    margin-top: 5%;
+    
+    
+}
+#btn{
+    width: 150px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#7192ee ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    margin-left: -40px;
+    
+    
+    
+    
+}
+#img2{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 460px;
+    top: 50px;
+   
+
+}
+#cadastrohr{
+    margin-left: -50px;
+    margin-top: 10%;
+}
+
+
+.link2{
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 1250px;
+}
+#botao{
+    margin-top: 50px;
+    margin-left: 460px;
+    
+}
+/*Responsivo 1*/
+@media screen and (max-width: 1200px){
+    
+   #usuario{
+       margin-left: 30%;
+       margin-top: 5px;
+       
+   }
+   #labeluser{
+       margin-top: 70px;
+   }
+   input{
+    width: 100px;
+    padding: 10px;
+    }
+    h4{
+        text-align: center;
+        top:100px;
+    }
+.container{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+#usuario{
+    width: 425px;
+    height: 50px;
+    left: 4%;
+    margin-top: 10px;
+    position: absolute;
+}
+
+#senha{
+    width: 420px;
+    height: 50px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+#img2{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left:410px;
+    margin-top: -60px;
+   
+
+}
+#labeluser{
+    margin-top: -70px;
+    margin-left: 450px;
+}
+#labelsenha{
+    margin-top: 100px;
+    margin-left: 450px;
+}
+
+}
+#botao{
+    margin-top: 50px;
+    margin-left: 460px;
+    
+
+}

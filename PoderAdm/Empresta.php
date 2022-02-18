@@ -10,7 +10,7 @@ if (isset($_POST['botao'])) {
     if (empty($quantdisp)) {
         echo "<script>alert('Selecione algum item para emprestar!');</script>";
         echo "<script>window.location.href = 'Emprestimo.php';</script>";
-    } /* else {
+    }  else {
         for ($i = 0; $i < count($emprestimo); $i++) {
             $sql = "SELECT id_produto, quant_estoque FROM produto WHERE nome = '$produto[$i]'";
             $execute = mysqli_query($conn, $sql);
@@ -25,5 +25,5 @@ if (isset($_POST['botao'])) {
                 }
             }
         }
-    } */
+    } 
 }
