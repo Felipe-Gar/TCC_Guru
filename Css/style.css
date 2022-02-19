@@ -119,6 +119,9 @@ label{
         text-align: center;
         top:100px;
     }
+    #btn{
+        margin-left: 450px;
+    }
 .container{
     width: 50%;
     margin: 0 auto;
@@ -163,4 +166,212 @@ label{
     margin-left: 460px;
     
 
+}
+
+@media screen and (max-width: 1000px){
+    #nome{
+        margin-left: 30%;
+        margin-top: 7px;
+        
+    }
+    #labeluser{
+        margin-top: 70px;
+    }
+    input{
+     width: 100px;
+     padding: 10px;
+     }
+     h4{
+         text-align: center;
+         top:100px;
+     }
+ .container{
+     width: 50%;
+     margin: 0 auto;
+     margin-top: 20%;
+
+}
+#nome{
+    width: 425px;
+    height: 50px;
+    left: 4%;
+    margin-top: 10px;
+    position: absolute;
+}
+
+#senha{
+    width: 420px;
+    height: 50px;
+    margin-left: 17%;
+    margin-top: 10px;
+}
+#img2{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left:330px;
+    margin-top: -60px;
+   
+
+}
+#labeluser{
+    margin-top: -70px;
+    margin-left: 80px;
+}
+#labelsenha{
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+}
+#botao{
+    margin-top: 50px;
+    margin-left: 460px;
+    
+
+}
+
+#btn{
+    width: 150px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#7192ee ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    margin-left: -550px;
+    
+    
+    
+    
+}
+label{
+    margin-left: 40%;
+    font-size: 20px;
+   
+}
+
+.link2{
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 970px;
+}
+@media screen and (max-width: 720px){
+    #nome{
+        margin-left: 30%;
+        margin-top: 1px;
+        
+        
+    }
+    #labeluser{
+        margin-top: 70px;
+        margin-left: 55px;
+    }
+    input{
+     width: 100px;
+     padding: 10px;
+     }
+     h4{
+         text-align: center;
+         top:100px;
+     }
+ .container{
+     width: 50%;
+     margin: 0 auto;
+     margin-top: 20%;
+
+}
+#nome{
+    
+    width: 300px;
+    height: 50px;
+    margin-left: -30%;
+    margin-top: 10px;
+}
+
+#senha{
+    width: 300px;
+    height: 50px;
+    margin-left: -30%;
+    margin-top: 10px;
+}
+#img2{
+    width: 350px;
+    height: 180px;
+    position: absolute;
+    left:268px;
+    margin-top: -60px;
+   
+
+}
+#labeluser{
+    margin-top: -70px;
+    margin-left: -100px;
+}
+#labelsenha{
+    margin-top: 100px;
+    margin-left: -300px;
+}
+
+
+
+#btn{
+    width: 150px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#7192ee ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    margin-left: -580px;
+    
+    
+    
+    
+}
+label{
+    margin-left: 40%;
+    font-size: 20px;
+   
+}
+
+.link2{
+    text-align: center;
+    margin-top: 11%;
+    margin-left: 1250px;
+}
+}
+@media screen and (max-width: 400px){
+    #btn{
+        width: 130px;
+        text-align: center;
+        padding: 15px 20px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 6px;
+        background-color:#7192ee ;
+        font-size: 18px;
+        color:rgb(255, 255, 255);
+        margin-left: -850px;
+        
+        
+    
+}
+.link2{
+    margin-left: 390px;
+    margin-top: 150px;
+}
+
+#labeluser{
+    margin-top: 70px;
+    margin-left: -40px;
+}
+#labelsenha{
+    margin-top:  50px;
+    margin-left: -25%;
+}
+
+}
+@media screen and (max-width: 150px){
 }
