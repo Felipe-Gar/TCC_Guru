@@ -30,8 +30,22 @@ if (isset($_POST['botao'])) {
                 } else{
                     $resu[$i] = $quant[$i]-$emprestimo[$i];
                     $conta = "UPDATE produto SET quant_estoque = '$resu[$i]' WHERE id_produto = '$id'";
+
                     if(mysqli_query($conn, $conta)){
-                        echo "<script>alert(' Sucesso no emprestimo');</script>";
+                       $insert_empre = "INSERT INTO emprestimos (id_usuarios, data_retirada) VALUES ('$_SESSION[id_usuarios]', NOW())";
+
+                       if(mysqli_query($conn, $insert_empre)){
+                           $selec_emp = "SELECT id_emprestimos FROM emprestimos WHERE data_retirada = NOW() AND id_usuarios = '$_SESSION[id_usuarios]'";
+                           $exec_emp = mysqli_query($conn, $selec_emp);
+                           $result_exec = mysqli_fetch_assoc($exec_emp);
+
+                           $insert_proemp = "INSERT INTO produto_emprestimo (id_emprestimos, id_produto, id_usuarios, quant) VALUES ('$result_exec[id_emprestimos]', '$id', '$_SESSION[id_usuarios]', '$emprestimo[$i]')";
+                       
+                           if(mysqli_query($conn, $insert_proemp)){
+                               echo "<script>alert('SUCESSO');</script>";
+                               echo "<script>window.location.href = '../AreaPrivada/Colaborador.php'</script>";
+                           }
+                       }
                     }
                 }
             }
