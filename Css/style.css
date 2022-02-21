@@ -1,17 +1,10 @@
 body{
-
-    background-repeat: no-repeat;
-    background-position: 400px -30px;
-    background-size: 35%;
-
+background-repeat: no-repeat;
+background-position: 400px -30px;
+background-size: 35%;
 background: linear-gradient(#7192ee, #fefbff);
 background-attachment: fixed;
-
 }
-    
-
-
-
 input{
     width: 100px;
     padding: 10px;
@@ -41,9 +34,12 @@ label{
     margin-left: 40%;
     font-size: 20px;
 }
-
+#labeluser{
+    margin-left: 16%;
+}
 #labelsenha{
     margin-top: 3%;
+    margin-left: 16%;
 
 
 }
@@ -52,7 +48,7 @@ label{
     position: absolute;
     width: 80px;
     text-align: center;
-    padding: 0px 50px;
+    padding: 0px 8%;
     font-size: 18px;
     color:rgb(255, 255, 255);
     margin-top: 5%;
@@ -85,16 +81,10 @@ label{
 
 }
 #cadastrohr{
-    margin-left: -50px;
-    margin-top: 10%;
+    margin-left: 190px;
+    margin-top: -165px;
 }
 
-
-.link2{
-    text-align: center;
-    margin-top: 11%;
-    margin-left: 1250px;
-}
 #botao{
     margin-top: 50px;
     margin-left: 470px;
@@ -139,7 +129,7 @@ label{
 #senha{
     width: 420px;
     height: 50px;
-    margin-left: 30%;
+    margin-left: 15%;
     margin-top: 10px;
 }
 #img2{
@@ -152,22 +142,39 @@ label{
 
 }
 #labeluser{
-    margin-top: -70px;
-    margin-left: 450px;
+    margin-top: -50px;
+    margin-left: 90px;
 }
 #labelsenha{
-    margin-top: 100px;
-    margin-left: 450px;
+    margin-top: 60px;
+    margin-left: 90px;
 }
 
-}
+
 #botao{
-    margin-top: 50px;
-    margin-left: 460px;
+    margin-top: 40px;
+    margin-left: -340px;
     
 
 }
+.link2{
+    margin-left: 80%;
+    margin-top: 24%;
+}
+}
+@media screen and (max-width: 1260px){
+    #img2{
+        margin-left: -3%;
+    }
+    #botao{
+        margin-left: 33%;
+    }
+    .link2{
+        margin-left: 80%;
+        margin-top: 25%;
+    }
 
+}
 @media screen and (max-width: 1000px){
     #nome{
         margin-left: 30%;
@@ -192,9 +199,9 @@ label{
 
 }
 #nome{
-    width: 425px;
+    width: 420px;
     height: 50px;
-    left: 4%;
+    margin-left: -0%;
     margin-top: 10px;
     position: absolute;
 }
@@ -202,28 +209,28 @@ label{
 #senha{
     width: 420px;
     height: 50px;
-    margin-left: 17%;
+    margin-left: -0%;
     margin-top: 10px;
 }
 #img2{
     width: 400px;
     height: 200px;
     position: absolute;
-    left:330px;
+    left:250px;
     margin-top: -60px;
    
 
 }
 #labeluser{
     margin-top: -70px;
-    margin-left: 80px;
+    margin-left: 0px;
 }
 #labelsenha{
     margin-top: 100px;
-    margin-left: 80px;
+    margin-left: 0px;
 }
 
-}
+
 #botao{
     margin-top: 50px;
     margin-left: 460px;
@@ -240,7 +247,7 @@ label{
     background-color:#7192ee ;
     font-size: 18px;
     color:rgb(255, 255, 255);
-    margin-left: -550px;
+    margin-left: -650px;
     
     
     
@@ -254,8 +261,9 @@ label{
 
 .link2{
     text-align: center;
-    margin-top: 20%;
-    margin-left: 970px;
+    margin-top: 35%;
+    margin-left: 670px;
+}
 }
 @media screen and (max-width: 720px){
     #nome{
@@ -264,10 +272,7 @@ label{
         
         
     }
-    #labeluser{
-        margin-top: 70px;
-        margin-left: 55px;
-    }
+    
     input{
      width: 100px;
      padding: 10px;
@@ -325,7 +330,7 @@ label{
     background-color:#7192ee ;
     font-size: 18px;
     color:rgb(255, 255, 255);
-    margin-left: -580px;
+    margin-left: -50px;
     
     
     
@@ -353,11 +358,18 @@ label{
         background-color:#7192ee ;
         font-size: 18px;
         color:rgb(255, 255, 255);
-        margin-left: -850px;
+        margin-left: -800px;
+        margin-top: 500%;
         
         
     
-}
+
+    }
+    #senha{
+        margin-top: 70%;
+        margin-left: -45%;
+    }
+
 .link2{
     margin-left: 390px;
     margin-top: 150px;
@@ -373,5 +385,105 @@ label{
 }
 
 }
-@media screen and (max-width: 150px){
+@media screen and (max-width:  800px){
+
+#img2{
+    margin-left: -8%;
+    
+}
+#btn{
+    margin-top: 50%;
+}
+#senha{
+    margin-left: -10%;
+}
+#nome{
+    margin-left: -5%;
+}
+
+#labeluser{
+    margin-top: 10px;
+    margin-left: -40px;
+}
+#labelsenha{
+    margin-left: -10%;
+}
+.link2{
+    margin-left: 68%;
+    margin-top: 45%;
+}
+}
+@media screen and (max-width:  500px){
+    #labelsenha{
+        margin-top:  55%;
+    }
+    #labeluser{
+        margin-top: 30%;
+        margin-left: -10%;
+
+    }
+    #img2{
+        margin-left: -31%;
+        height: 30%;
+        width: 60%;
+    }
+    #botao{
+        margin-left:10%;
+    }
+    #link2{
+        margin-left: 40%;
+        margin-top: 65%;
+    }
+    
+    
+}
+@media screen and (max-width:  660px){
+    #img2{
+        margin-left: -20%;
+    }
+    #botao{
+        margin-left: 10%;
+    }
+    #nome{
+        margin-left: -2%;
+        width: 49%;
+    }
+    #senha{
+        margin-left: -2%;
+        width: 100%;
+    }
+    #labeluser{
+        margin-left: -2%;
+    }
+    #labelsenha{
+        margin-left: -2%;
+    }
+    .link2{
+        margin-left: 60%;
+        margin-top: 60%;
+    }
+}
+@media screen and (max-width: 720px){
+    #img2{
+        margin-left: -15%;
+    }
+    #labeluser{
+        margin-left: 2%;
+    }
+    #labelsenha{
+        margin-left: 2%;
+    }
+    #senha{
+        margin-left: 0%;
+    }
+    #nome{
+        margin-left: 0%;
+    }
+    #botao{
+        margin-left: 10%;
+    }
+    .link2{
+        margin-left: 60%;
+        margin-top: 55%;
+    }
 }
