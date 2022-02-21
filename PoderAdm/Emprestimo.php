@@ -28,7 +28,7 @@ include_once("../banco_login/usuarios.php");
     </div>
     <h1>Emprestimo</h1>
     <div>
-        <form>
+        <form action="Empresta.php" method="POST">
             <div>
                 <table id="emprestimo">
                     <thead>
@@ -43,13 +43,15 @@ include_once("../banco_login/usuarios.php");
   
                 </table>
             </div>
+
             <div id="result">
                 
 
             </div>
             <input type="submit" name="botao" value="Emprestar">
+        </form>
     </div>
-
+   
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="emprestar.js"></script>
 </body>

@@ -26,7 +26,7 @@ $script = "
 
             var tbody       = document.createElement('tbody');
             var tr          = document.createElement('tr');
-            var inputhidden = document.createElement('input');
+            var inputHidden = document.createElement('input');
             var td          = document.createElement('td');
             var tdquan      = document.createElement('td');
             var tdempre     = document.createElement('td');
@@ -36,11 +36,11 @@ $script = "
             tdcaixa.innerHTML = id;
             tdquan.innerHTML  = '<input name=quant[] type=number value=' + name + ' readonly>';
             tdempre.innerHTML = '<input name=emprestimo[] type=number required>';
-            inputhidden.type  = 'hidden';
-            inputhidden.name  = 'escondido[]';
-            inputhidden.value = id;
+            inputHidden.type  = 'hidden';
+            inputHidden.name  = 'escondido[]';
+            inputHidden.value = id;
 
-            result.appendChild(inputhidden);
+            result.appendChild(inputHidden);
             emprestimo.appendChild(tbody);
             tbody.appendChild(tr);
             tr.appendChild(td);
@@ -51,5 +51,5 @@ $script = "
     </script>";
     
  echo $script;
-
+ echo "";
 ?>
