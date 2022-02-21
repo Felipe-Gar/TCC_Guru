@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Fev-2022 às 18:56
+-- Tempo de geração: 21-Fev-2022 às 18:51
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.10
 
@@ -45,6 +45,14 @@ CREATE TABLE `grupo_usuarios` (
   `nivel` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `grupo_usuarios`
+--
+
+INSERT INTO `grupo_usuarios` (`id_grupo_usuarios`, `nome_grupo`, `nivel`) VALUES
+(1, 'Administrador', '1'),
+(2, 'Colaborador', '2');
+
 -- --------------------------------------------------------
 
 --
@@ -65,8 +73,11 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_produto`, `nome`, `descricao`, `quant_estoque`, `quant_minima`, `numero_caixa`) VALUES
-(1, 'caneta', 'ewtdfghbkjnlmnbvcgxfczdx', 34, 21, 12),
-(2, 'papel', 'Branco a4 ', 34, 6, 65);
+(2, 'papel', 'Branco a4 ', 34, 6, 65),
+(14, 'caneta', 'bic azul', 55, 8, 45),
+(15, 'lapiseira', 'bic sem refil ', 29, 5, 56),
+(16, 'refil lapiseira', 'tamanho 0.7', 55, 12, 56),
+(17, 'pasta ', 'transparente  ', 45, 6, 89);
 
 -- --------------------------------------------------------
 
@@ -92,10 +103,18 @@ CREATE TABLE `usuarios` (
   `id_usuarios` int(11) NOT NULL,
   `nivel` int(45) NOT NULL,
   `nome` varchar(220) NOT NULL,
-  `senha` varchar(55) NOT NULL,
-  `nome_usuarios` varchar(45) NOT NULL,
-  `grupo_usuarios_id_grupo_usuarios` int(11) NOT NULL
+  `email` varchar(50) DEFAULT NULL,
+  `senha` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuarios`, `nivel`, `nome`, `email`, `senha`) VALUES
+(4, 1, 'Fel', 'felipesgarcia10@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(5, 2, 're', 'mariocesartrindade@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(6, 2, 'Emilly', 'mariocesartrindade@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Índices para tabelas despejadas
@@ -131,9 +150,7 @@ ALTER TABLE `produto_emprestimo`
 -- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id_usuarios`,`grupo_usuarios_id_grupo_usuarios`),
-  ADD UNIQUE KEY `nome_usuarios_UNIQUE` (`nome_usuarios`),
-  ADD KEY `fk_usuarios_grupo_usuarios1_idx` (`grupo_usuarios_id_grupo_usuarios`);
+  ADD PRIMARY KEY (`id_usuarios`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -149,19 +166,19 @@ ALTER TABLE `emprestimos`
 -- AUTO_INCREMENT de tabela `grupo_usuarios`
 --
 ALTER TABLE `grupo_usuarios`
-  MODIFY `id_grupo_usuarios` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_grupo_usuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuarios` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restrições para despejos de tabelas
