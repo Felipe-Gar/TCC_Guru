@@ -7,7 +7,7 @@ session_start(); //abre a sessão
 if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um id_usuarios
     header("location:../index.php");
     exit; //vai voltar para tela de login
-} else if ($_SESSION['nivel'] != 1) {
+} else if ($_SESSION['id_grupo'] != 1) {
     header("location: Colaborador.php");
 }
 

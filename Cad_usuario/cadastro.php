@@ -15,22 +15,39 @@ include_once '../banco_login/usuarios.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/cadastro.css">
     <title>Cadastro</title>
 </head>
 
+<img src="../img/6.png" id="img3">
+
 <body>
-    <form method="POST">
-        <input type="text" name="nome" placeholder="Coloque o nome"><br><br>
-        <input type="email" name="email" placeholder="Coloque seu email"><br><br>
-        <input type="password" name="senha" placeholder="Crie uma senha "><br><br>
-        <input type="password" name="confsenha" placeholder="Confirme sua senha"><br><br>
-        <select class = "form-select" name="nivel" aria-label="Default select example">
+<form> 
+<h2> Formulário de Cadastro </h2>
+    <div class= "text-center">
+    <form method="POST">  
+        <label  id="labelnome">NOME</label><br>
+        <input type="text" name="nome" id="nome" placeholder="digite o nome"><br><br>
+
+        <label for=""id="email1">E-MAIL</label><br>
+        <input type="email" name="email" id="email" placeholder="usuario@gmail.com"><br><br>
+
+        <label for="" id="criarsenha1">CRIAR SENHA</label><br>
+        <input type="password" name="senha" id="senha" placeholder="Crie uma senha "><br><br>
+
+        <label for=""id="confsenha1">CONFIRMAR SENHA</label><br>
+        <input type="password" name="confsenha" id="confsenha" placeholder="Confirme sua senha"><br><br>
+        <select class = "form-select" name="nivel" id="nivel" aria-label="Default select example">
             <option>Selecione</option>
+  </div>
+  <div class="botao">
+<input type="submit" name="botao" class="btn_enviar" value="Cadastrar" id="botao">
+        </div>
             <?php
             $resultadoGrupo = "SELECT * FROM grupo_usuarios";
             $re_grupo = mysqli_query($conn, $resultadoGrupo);
             while($row_grupo = mysqli_fetch_assoc($re_grupo)){?> 
-            <option value ="<?php echo $row_grupo['nivel']?>">
+            <option value ="<?php echo $row_grupo['id_grupo_usuarios']?>">
                 <?php echo $row_grupo['nome_grupo'];?>
             </option><?php
             }
@@ -50,15 +67,15 @@ if (isset($_POST['nome'])) {
     $nome = addslashes($_POST['nome']);
     $email = addslashes($_POST['email']);
     $senha = addslashes($_POST['senha']);
-    $nivel = addslashes($_POST['nivel']);
+    $id_grupo = addslashes($_POST['id_grupo']);
     $confirmarsenha = addslashes($_POST['confsenha']);
     //verificar se o campo esta preenchido
-    if (!empty($nome) && !empty($email) && !empty($senha) && !empty($nivel) && !empty($confirmarsenha)) {
+    if (!empty($nome) && !empty($email) && !empty($senha) && !empty($id_grupo) && !empty($confirmarsenha)) {
         $u->conectar("system_guru", "localhost", "root", "");
         if ($u->msgErro == "") //se esta tudo certo
         {
             if ($senha == $confirmarsenha) {//Ver se senha e confirmarsenha são iguais
-                if ($u->cadastrar($nome, $email, $senha, $nivel)) {
+                if ($u->cadastrar($nome, $email, $senha, $id_grupo)) {
                     echo "<script>alert('Cadastrado com Sucesso');</script> ";
                 } else {
                     echo "Email ja cadastrado ";

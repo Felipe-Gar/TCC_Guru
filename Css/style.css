@@ -87,9 +87,17 @@ label{
 
 #botao{
     margin-top: 50px;
-    margin-left: 470px;
+    margin-left: 412px;
     
 }
+
+.link2{
+    text-align: center;
+    margin-top: 21%;
+    margin-left: 1070px;
+}
+
+
 /*Responsivo 1*/
 @media screen and (max-width: 1200px){
     
@@ -465,16 +473,22 @@ label{
 }
 @media screen and (max-width: 720px){
     #img2{
-        margin-left: -15%;
+        margin-left: -35%;
     }
     #labeluser{
         margin-left: 2%;
     }
+    #cadastrohr{
+        margin-left: 130px;
+        margin-top: -135px;
+    }
+    
     #labelsenha{
         margin-left: 2%;
     }
     #senha{
         margin-left: 0%;
+        width: 111%;
     }
     #nome{
         margin-left: 0%;

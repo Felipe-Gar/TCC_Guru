@@ -19,11 +19,11 @@ if (isset($_POST['botao'])) {
             while ($recebe = mysqli_fetch_assoc($execute)) {
                 $id = $recebe['id_produto'];
 
-                if ($emprestimo[$i] < 0) {
+                if ($emprestimo[$i] < 0) { //caso o a quantidade for menor que zero
                     echo "<script>alert('O valor que você deseja emprestar é maior do que o disponivel!');</script>";
                     echo "<script>window.location.href = 'Emprestimo.php';</script>";
 
-                } else if ($emprestimo[$i] > $quant[$i]) {
+                } else if ($emprestimo[$i] > $quant[$i]) {//caso o emprestimo for maior que aquantidade 
                     echo "<script>alert('O valor que você deseja emprestar e maior que o disponivel!');</script>";
                     echo "<script>window.location.href = 'Emprestimo.php';</script>";
 
@@ -39,13 +39,16 @@ if (isset($_POST['botao'])) {
                            $exec_emp = mysqli_query($conn, $selec_emp);
                            $result_exec = mysqli_fetch_assoc($exec_emp);
 
-                           $insert_proemp = "INSERT INTO produto_emprestimo (id_emprestimos, id_produto, id_usuarios, quant) VALUES ('$result_exec[id_emprestimos]', '$id', '$_SESSION[id_usuarios]', '$emprestimo[$i]')";
+                           $insert_proemp = "INSERT INTO emprestimos_produto (id_emprestimos, id_produto, id_usuarios, quant) VALUES ('$result_exec[id_emprestimos]', '$id', '$_SESSION[id_usuarios]', '$emprestimo[$i]')";
                        
                            if(mysqli_query($conn, $insert_proemp)){
                                echo "<script>alert('SUCESSO');</script>";
                                echo "<script>window.location.href = '../AreaPrivada/Colaborador.php'</script>";
                            }
                        }
+                    }else{
+                        echo "<script>alert(' Emprestimo falhou ') ;</script>";
+                                
                     }
                 }
             }

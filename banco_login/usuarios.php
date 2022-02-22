@@ -15,7 +15,7 @@ Class Usuario{
         }
         
     }
-    public function cadastrar($nome, $email, $senha, $nivel){
+    public function cadastrar($nome, $email, $senha, $id_grupo){
         global $pdo;
         global $msgErro;
 
@@ -23,17 +23,14 @@ Class Usuario{
         $sql = $pdo->prepare("SELECT id_usuarios FROM usuarios WHERE nome = :n");
         $sql->bindValue(":n",$nome);
         $sql->execute();
+
         if($sql->rowCount() > 0)
         {
             return false;//ja esta cadastrado
         }
         else{
         //caso nao estiver cadastrado
-        $sql = $pdo->prepare("INSERT INTO usuarios (nome, email, senha, nivel) VALUES (:n, :e, :s, :i)");
-        $sql->bindValue(":n",$nome);
-        $sql->bindValue(":e",$email);
-        $sql->bindValue(":s",md5($senha));
-        $sql->bindValue(":i",$nivel);
+        $sql = $pdo->prepare("INSERT INTO usuarios (nome, email, senha, id_grupo_usuarios) VALUES ('$nome', '$email', md5('$senha'), '$id_grupo')");
         $sql->execute();
         
         return true; //cadastrado com sucesso
@@ -58,9 +55,9 @@ Class Usuario{
             $verificar = $pdo->query("SELECT * FROM usuarios");
             while($linha = $verificar->fetch(PDO::FETCH_ASSOC)){
                 if($linha['id_usuarios'] == $_SESSION['id_usuarios']){
-                    $nivel = $linha ['nivel'];
+                    $id_grupo = $linha['id_grupo_usuarios'];
 
-                    switch ($nivel){
+                    switch ($id_grupo){
 
                         case'1';
                         header("location: ./AreaPrivada/Administrador.php");
@@ -75,7 +72,7 @@ Class Usuario{
                         header("location: ../index.php");
                         break;
                     }
-                    $_SESSION['nivel'] = $nivel;
+                    $_SESSION['id_grupo'] = $id_grupo;
                 }
             }
             return true;
