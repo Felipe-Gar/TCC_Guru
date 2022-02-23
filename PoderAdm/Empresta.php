@@ -1,7 +1,12 @@
 <?php
 include_once("../Cad_usuario/conexao.php");
 session_start();
-
+if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um id_usuarios
+    header("location:../index.php");
+    exit; //vai voltar para tela de login
+} else if ($_SESSION['id_grupo'] != 2) {
+    header("location: Colaborador.php");
+}
 if (isset($_POST['botao'])) {
     @$quant  = $_POST['quant'];
     @$emprestimo = $_POST['emprestimo'];

@@ -15,7 +15,7 @@ public function conectar($dbname, $host, $usuario, $senha){
         $MsgErro = $e->getMessage(""); 
     }
 }
-public function cadastrar($nome, $descricao, $quant_estoque, $quant_minima, $caixa){
+public function cadastrar($nome, $descricao, $quant_estoque, $caixa){
     global $pdo;
     global $MsgErro;
 
@@ -29,11 +29,10 @@ public function cadastrar($nome, $descricao, $quant_estoque, $quant_minima, $cai
     }
     else{
     //caso nao estiver cadastrado
-    $sql = $pdo->prepare("INSERT INTO produto (nome, descricao, quant_estoque, quant_minima, numero_caixa) VALUES (:n, :d, :e, :m, :c)");
+    $sql = $pdo->prepare("INSERT INTO produto (nome, descricao, quant_estoque,  numero_caixa) VALUES (:n, :d, :e, :c)");
     $sql->bindValue(":n",$nome);
     $sql->bindValue(":d",$descricao);
     $sql->bindValue(":e",$quant_estoque);
-    $sql->bindValue(":m",$quant_minima);
     $sql->bindValue(":c",$caixa);
     $sql->execute();
     

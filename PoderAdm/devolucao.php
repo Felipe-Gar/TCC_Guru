@@ -16,9 +16,9 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprestimo</title>
+    <title>Devolução</title>
 </head>
-<a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
+<a  href="../AreaPrivada/Administrador.php"><button class="btn btn-primary" id="inicio">Inicio</button></a>
 
 <body>
     <div>
@@ -26,28 +26,25 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
         <form method="POST" id="form_pesquisa" action="">
             <label>Pesquisar</label>
             <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite o nome de usuario">
-
         </form>
         <ul class="resultado">
 
         </ul>
 
     </div>
-    <h1>Emprestimo</h1>
+    <h1>Devolução</h1>
     <div>
-        <form action="Empresta.php" method="POST">
+        <form action="devolve.php" method="POST">
             <div>
-                <table id="emprestimo">
+                <table id="devolve">
                     <thead>
                         <tr>
                             <td>Caixa</td>
                             <td>Nome</td>
                             <td>Quantidade</td>
-                            <td>Emprestimo</td>
-
+                            <td>Devolução</td>
                         </tr>
                     </thead>
-  
                 </table>
             </div>
 
@@ -55,12 +52,12 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
                 
 
             </div>
-            <input type="submit" name="botao" value="Emprestar">
+            <input type="submit" name="botao" value="devolve">
         </form>
     </div>
    
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script type="text/javascript" src="emprestar.js"></script>
+    <script type="text/javascript" src="devolver.js"></script>
 </body>
 
 </html>

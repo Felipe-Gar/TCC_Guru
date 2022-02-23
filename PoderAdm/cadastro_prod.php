@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="../Css/cadastro.css">k
     <title>Cadastrar Produto</title>
 </head>
-<a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
 
 <body>
+    <header>    <a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
+</header>
+
     <form method="POST">
         <label >Cadastro Produto</label><br><br>
         <input type="text" name="nome" placeholder="Insira o nome do Produto"><br><br>
         <input type="text" name="descricao" placeholder="Insira uma descrição "><br><br>
         <input type="number" name="quant_estoque" placeholder="Quantidade em estoque" maxlength="4"><br><br>
-        <input type="number" name="quant_minima" placeholder="Quantidade minima" maxlength="2"><br><br>
         <input type="number" name="caixa" placeholder="Insira a caixa do produto" maxlength="3"><br><br>
         <input type="submit" value="Cadastrar">
 
@@ -37,14 +38,13 @@
         $nome = addslashes($_POST['nome']);
         $descricao = addslashes($_POST['descricao']);
         $quant_estoque = addslashes($_POST['quant_estoque']);
-        $quant_minima = addslashes($_POST['quant_minima']);
         $caixa = addslashes($_POST['caixa']);
         //verificac se o campo esta preenchido
-        if(!empty($nome) && !empty($descricao) && !empty($quant_estoque) && !empty($quant_minima) && !empty($caixa) ){
+        if(!empty($nome) && !empty($descricao) && !empty($quant_estoque) &&  !empty($caixa) ){
           $p->conectar("system_guru", "localhost", "root","");//conectando bd
           if($p->MsgErro == "")//se esta tudo certo
              {
-                 if($p->cadastrar($nome,  $descricao, $quant_estoque, $quant_minima, $caixa)){
+                 if($p->cadastrar($nome,  $descricao, $quant_estoque, $caixa)){
                      echo "<script>alert('Cadastrado com Sucesso');</script>";
                  }else{
                      echo "<script>alert('Este produto já foi cadastrado');</script>";

@@ -17,9 +17,8 @@ input{
     
 
     }
-    .inicio{
-        margin-top: 50%;
-    }
+    
+
     #nivel{
         width: 20%;
          text-align: center;
@@ -90,6 +89,10 @@ input{
 #confsenha1{
     margin-left: -38%;
 }
+
+
+
+
 @media screen and (max-width: 1200px){
     #img3{
         margin-left: -90%;
