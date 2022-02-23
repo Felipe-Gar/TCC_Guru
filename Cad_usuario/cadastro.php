@@ -21,13 +21,14 @@ include_once '../banco_login/usuarios.php';
 
 <img src="../img/6.png" id="img3">
 
+<a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
 <body>
 <form> 
 <h2> Formulário de Cadastro </h2>
     <div class= "text-center">
     <form method="POST">  
         <label  id="labelnome">NOME</label><br>
-        <input type="text" name="nome" id="nome" placeholder="digite o nome"><br><br>
+        <input type="text" name="nome" id="nome" placeholder="Digite o seu nome"><br><br>
 
         <label for=""id="email1">E-MAIL</label><br>
         <input type="email" name="email" id="email" placeholder="usuario@gmail.com"><br><br>
@@ -40,9 +41,7 @@ include_once '../banco_login/usuarios.php';
         <select class = "form-select" name="nivel" id="nivel" aria-label="Default select example">
             <option>Selecione</option>
   </div>
-  <div class="botao">
-<input type="submit" name="botao" class="btn_enviar" value="Cadastrar" id="botao">
-        </div>
+ 
             <?php
             $resultadoGrupo = "SELECT * FROM grupo_usuarios";
             $re_grupo = mysqli_query($conn, $resultadoGrupo);
@@ -53,8 +52,15 @@ include_once '../banco_login/usuarios.php';
             }
             ?>
         </select><br><br>
-        <input type="submit" value="Cadastrar">
+        <div class="botao">
+<input type="submit" name="botao" class="btn_enviar" value="Cadastrar" id="botao">
+        </div>
     </form>
+    <div class="link2">
+            <a href="ajuda/ajuda.html">
+                <p id="cadastrohr"> Ajuda</p>
+            </a>
+            </div>
 </body>
 
 </html>

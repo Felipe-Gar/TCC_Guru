@@ -33,6 +33,7 @@
             <a href="ajuda/ajuda.html">
                 <p id="cadastrohr"> Ajuda</p>
             </a>
+            </div>
     <!-- BLOCO DE PHP -->
 <?php
 require_once 'banco_login/usuarios.php';
@@ -47,13 +48,13 @@ if (isset($_POST['nome'])) {
       $u->conectar("system_guru", "localhost", "root", "");
       if($u->msgErro == ""){
           if(!$u->logar($nome, $senha)){
-              echo "Login errado!";
+              echo "<script>alert('Login errado!');</script>";
           }
       } else{
           echo "Erro: " . $u->msgErro;
       }
   } else{
-      echo "Preencha todos os campos obrigatórios!";
+      echo "<script>alert('Preencha todos os campos obrigatórios!');</script>";
   }
 }
 ?>

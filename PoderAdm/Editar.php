@@ -17,6 +17,7 @@ $edit = mysqli_fetch_assoc($exec);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Produto</title>
 </head>
+<a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
 
 <body>
     <form method="POST" action="proce_edit.php">

@@ -12,6 +12,7 @@ include_once("../banco_login/usuarios.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emprestimo</title>
 </head>
+<a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
 
 <body>
     <div>

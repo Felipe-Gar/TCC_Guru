@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../Css/cadastro.css">k
     <title>Cadastrar Produto</title>
 </head>
+<a  href="../AreaPrivada/Administrador.php"><button id="inicio">Inicio</button></a>
+
 <body>
     <form method="POST">
         <label >Cadastro Produto</label><br><br>
