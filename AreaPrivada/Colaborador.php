@@ -4,14 +4,29 @@ include_once("../PoderAdm/usuario_prod.php");
 
 session_start(); //abre a sessão 
 if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um id_usuarios
-    header("location:../index.php");
+   header("location:../index.php");
     exit; //vai voltar para tela de login
 } else if ($_SESSION['id_grupo'] != 2) {
     header("location: Colaborador.php");
 }
-echo "<a href='../PoderAdm/Emprestimo.php'><button>Emprestar</button></a></br>";
-echo "<a href='../PoderAdm/devolucao.php'><button>Devolver</button></a></br>";
+
 ?>
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/Colaborador.css">
+    <title>Document</title>
+</head>
+<img src="../img/6.png" id="img3">
+
+<body>
+    <header>
+<a href='../PoderAdm/Emprestimo.php'><button class="btn_enviar" >Emprestar</button></a>
+<a href='../PoderAdm/devolucao.php'><button class="btn_dev" >Devolver</button></a>
+</header>
 <table>
 <thead>
     <tr>
@@ -37,7 +52,7 @@ $resultado_usu = mysqli_query($conn, $result_usu);
      echo "<td>" . $row_usuario['descricao'];
      echo " <td>" . $row_usuario ['quant_estoque'] ;
      echo"<td>
-     <hr>
+     
      </td>
      ";
  }
@@ -46,3 +61,10 @@ $resultado_usu = mysqli_query($conn, $result_usu);
 ?>
 </tbody>
 </table>
+<div class="link2">
+        <a href="ajuda/ajuda.html">
+            <p id="cadastrohr"> Ajuda</p>
+        </a>
+    </div>
+</body>
+</html>

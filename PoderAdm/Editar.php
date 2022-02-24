@@ -18,9 +18,12 @@ $edit = mysqli_fetch_assoc($exec);
     <link rel="stylesheet" href="../Css/editar.css">
     <title>Editar Produto</title>
 </head>
+<img src="../img/6.png" id="img3">
+
 <a  href="../AreaPrivada/Administrador.php"><button class="btn_editar" id="inicio">Inicio</button></a>
 
 <body>
+    
     <div class="labeldiv">
     <form name="form" method="POST" action="proce_edit.php">
         <input type="hidden" name="id_produto" value="<?php echo $edit['id_produto'] ?>">
@@ -37,12 +40,17 @@ $edit = mysqli_fetch_assoc($exec);
         <label>Quantidade</label><br> 
         <input type="number" name="quant_estoque" value="<?php echo $edit['quant_estoque'] ?>"><br><br>
 
-        <input type="submit" value="Editar" class="btn_editar"  name="editar">
+        <input type="submit" value="Editar" class="btn_entrar"  name="editar">
         
 
 </div>
 
     </form>
+    <div class="link2">
+        <a href="ajuda/ajuda.html">
+            <p id="cadastrohr"> Ajuda</p>
+        </a>
+
 </body>
 
 </html>

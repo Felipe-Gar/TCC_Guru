@@ -1,0 +1,51 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: linear-gradient(#7192ee, #fefbff);
+    background-attachment: fixed;
+ 
+  
+}
+.btn_enviar{
+  
+    width: 120px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#2452d1 ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    top: 5%;
+    
+}
+.btn_dev{
+
+  width: 120px;
+  text-align: center;
+  padding: 15px 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  background-color:#2452d1 ;
+  font-size: 18px;
+  color:rgb(255, 255, 255);
+  top: 5%;
+}
+header{
+    margin-left: 80%;
+}
+table{
+    margin-left: 40%;
+    margin-top: 6%;
+    text-align: center;
+}
+#img3{
+    width: 290px;
+    height: 180px;
+    position: absolute;
+    left: 32px;
+    top: -10px;}
+    #cadastrohr{
+        text-align: center;
+        margin-top: 20%;
+        margin-left: 1200px;
+    }

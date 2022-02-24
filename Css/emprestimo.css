@@ -1,0 +1,67 @@
+*{
+    background-repeat: no-repeat;
+    background-position: 400px -30px;
+    background-size: 35%;
+    background: linear-gradient(#7192ee, #fefbff);
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.form-control{
+   text-align: center;
+   margin-left: -5%;
+}
+.form-emp{
+    text-align: center;
+   margin-left: 38%;
+}
+
+input{
+    width: 20%;
+    padding: 12px;
+    border-radius: 8px;
+   border-color: #fff;
+ 
+   
+}
+.form-button{
+    margin-left: 42%;
+    margin-top: 3%;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding: 6px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#7192ee ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    
+}
+.form-h1{
+    margin-left: 40%;
+}
+.inicio{
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    padding: 6px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#7192ee ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    margin-left: 90%
+}
+#img3{
+    width: 220px;
+    height: 180px;
+    position: absolute;
+    left: 1050px;
+    margin-left: -75%;
+}
+#cadastrohr{
+    text-align: center;
+    margin-top: 18%;
+    margin-left: 1300px;
+}

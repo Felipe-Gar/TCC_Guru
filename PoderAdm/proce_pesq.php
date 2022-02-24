@@ -20,7 +20,7 @@ if (($resultado_prod) AND ($resultado_prod->num_rows != 0)) {
 
 $script = "
     <script>
-       function emprestar(id, name, numero_caixa){
+       function emprestar(id, name, numero_caixa){ 
             var emprestimo = document.getElementById('emprestimo');
             var result     = document.getElementById('result');
 

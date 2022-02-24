@@ -1,0 +1,27 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: linear-gradient(#7192ee, #fefbff);
+    background-attachment: fixed;
+ text-align: center;
+  
+}
+table{
+    margin-left: 35%;
+    margin-top: 5%;
+    text-align: center;
+}
+.btn_deslogar{
+  margin-left: 73%;
+  margin-top: 35%;
+}
+#img3{
+    width: 290px;
+    height: 180px;
+    position: absolute;
+    left: 32px;
+    top: -10px;}
+    #cadastrohr{
+        text-align: center;
+        margin-top: 18%;
+        margin-left: 1200px;
+    }

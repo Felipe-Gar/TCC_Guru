@@ -1,0 +1,87 @@
+body{
+    background-image: linear-gradient(#7192ee, #fefbff);
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+input{
+    height: 100%;
+    width: 30%;
+}
+#produto1{
+margin-left: 490px;
+
+
+}
+ #produto2{
+     margin-left: 490px;
+     padding: 1%;
+     border: 1px solid rgb(255, 255, 255);
+     border-radius: 6px;
+
+     
+ }
+ #descricao1{
+    margin-left: 490px;
+ }
+ #descricao2{
+    margin-left: 490px;
+   padding: 1%;
+   border: 1px solid rgb(255, 255, 255);
+   border-radius: 6px;
+ }
+
+ #estoque1{
+    margin-left: 490px;
+ }
+ #estoque2{
+    margin-left: 490px;
+    padding: 1%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+ }
+ #qtd1{
+    margin-left: 490px;
+ }
+ #qtd2{
+    margin-left: 490px;
+    padding: 1%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+ }
+ #caixa1{
+    margin-left: 490px;
+    margin-top: 10px;
+ }
+ #caixa2{
+    margin-left: 490px;
+    margin-top: 1%;
+    padding: 1%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+ }
+ #cadastro1{
+    margin-left: 600px;
+    margin-top: 1%;
+    width: 150px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background-color:#7192ee ;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+
+ }
+#titulo{
+    margin-top:2%;
+    margin-left: 550px ;
+    size: 40%;
+}
+#img9{
+width: 170px;
+height: 120px;
+position: absolute;
+left: 5px;
+top: 1%;
+}

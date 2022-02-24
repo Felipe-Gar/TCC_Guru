@@ -4,7 +4,7 @@ Class Usuario{
     private $pdo; 
     public $msgErro = "";
 
-    public function conectar($dbname, $server, $usuario, $senha){ 
+    public function conectar($dbname, $server, $usuario, $senha){ //faz a função de conectar com bd
         global $pdo; 
         global $msgErro; 
         
@@ -15,7 +15,7 @@ Class Usuario{
         }
         
     }
-    public function cadastrar($nome, $email, $senha, $id_grupo){
+    public function cadastrar($nome, $email, $senha, $id_grupo){//passa as informções para fazer o cadastro
         global $pdo;
         global $msgErro;
 
@@ -41,7 +41,7 @@ Class Usuario{
         global $pdo; 
         global $msgErro; 
       
-        $sql = $pdo->prepare("SELECT id_usuarios FROM usuarios WHERE nome = :n AND senha = :s");
+        $sql = $pdo->prepare("SELECT id_usuarios FROM usuarios WHERE nome = :n AND senha = :s");//busca os dados para o login
         $sql->bindValue(":n",$usuario);
         $sql->bindValue(":s",md5($senha));
         $sql->execute();
