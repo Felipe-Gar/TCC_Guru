@@ -1,0 +1,56 @@
+body{
+    background-image: linear-gradient(#7192ee, #fefbff);
+    background-attachment: fixed;
+    }
+
+#funcoes{
+margin-left: 20px;
+width: 400px;
+
+}
+
+
+    #informaçoes2{
+        width: 900px;
+        margin-left: 570px;
+        
+    }
+
+#informaçoes{
+    width: 900px;
+    margin-left: 250px;
+    
+}
+
+#ajuda3{
+    width: 900px;
+    margin-left: 250px;
+    
+}#ajuda33{
+    width: 900px;
+    margin-left: 550px;
+    
+}
+
+#ajuda4{
+    width: 900px;
+    margin-left: 250px;
+    
+}
+#ajuda44{
+    width: 600px;
+    margin-left: 530px;
+    
+}
+
+#ajuda5{
+    width: 900px;
+    margin-left: 250px;
+    
+}
+#ajuda55{
+    width: 600px;
+    margin-left: 500px;
+    
+}
+

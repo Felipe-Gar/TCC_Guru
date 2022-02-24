@@ -7,7 +7,7 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
    header("location:../index.php");
     exit; //vai voltar para tela de login
 } else if ($_SESSION['id_grupo'] != 2) {
-    header("location: Colaborador.php");
+    header("location: Administrador.php");
 }
 
 ?>
@@ -24,6 +24,8 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
 
 <body>
     <header>
+    <a  href="../PoderAdm/deslogar.php"><button class="btn_deslogar" >Deslogar</button></a>
+
 <a href='../PoderAdm/Emprestimo.php'><button class="btn_enviar" >Emprestar</button></a>
 <a href='../PoderAdm/devolucao.php'><button class="btn_dev" >Devolver</button></a>
 </header>
@@ -62,9 +64,9 @@ $resultado_usu = mysqli_query($conn, $result_usu);
 </tbody>
 </table>
 <div class="link2">
-        <a href="ajuda/ajuda.html">
+        <a href="../banco_login/ajuda.html">
             <p id="cadastrohr"> Ajuda</p>
         </a>
-    </div>
+
 </body>
 </html>

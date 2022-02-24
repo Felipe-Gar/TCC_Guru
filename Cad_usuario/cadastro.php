@@ -71,10 +71,10 @@ if (!isset($_SESSION['id_usuarios'])) {
         </div>
     </form>
     <div class="link2">
-        <a href="ajuda/ajuda.html">
+        <a href="../banco_login/ajuda.html">
             <p id="cadastrohr"> Ajuda</p>
         </a>
-    </div>
+
 </body>
 
 </html>

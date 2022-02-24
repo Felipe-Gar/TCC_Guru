@@ -60,11 +60,10 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
             <input type="submit" class="form-button" name="botao" value="Emprestar">
         </form>
         <div class="link2">
-        <a href="ajuda/ajuda.html">
+        <a href="../banco_login/ajuda.html">
             <p id="cadastrohr"> Ajuda</p>
         </a>
-
-    </div>
+</div>
    
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="emprestar.js"></script>

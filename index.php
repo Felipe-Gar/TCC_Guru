@@ -29,11 +29,11 @@
         </form>
 
            </div>
-            <div class="link2">
-            <a href="ajuda/ajuda.html">
-                <p id="cadastrohr"> Ajuda</p>
-            </a>
-            </div>
+           <div class="link2">
+        <a href="banco_login/ajuda.html">
+            <p id="cadastrohr"> Ajuda</p>
+        </a>
+           </div>
     <!-- BLOCO DE PHP -->
 <?php
 require_once 'banco_login/usuarios.php';

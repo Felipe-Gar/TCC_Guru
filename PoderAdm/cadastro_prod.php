@@ -5,8 +5,8 @@ include_once("../banco_login/usuarios.php");
 if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um id_usuarios
     header("location:../index.php");
     exit; //vai voltar para tela de login
-} else if ($_SESSION['id_grupo'] != 2) {
-    header("location: Colaborador.php");
+} else if ($_SESSION['id_grupo'] != 1) {
+    header("location: ../AreaPrivada/Colaborador.php");
 }
 
  $p = new Produto("system_guru", "localhost", "root", "");
@@ -20,6 +20,10 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
     <link rel="stylesheet" href="../Css/cadproduto.css">
     <title>Cadastrar Produto</title>
 </head>
+<a href="../AreaPrivada/Administrador.php">
+                    <button class="btn_enviar" name="inicio" id="inicio">Inicio</button>
+                </a>
+
 <img src="../img/6.png" id="img9">
 
 
@@ -47,10 +51,10 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
 
     </form>
     <div class="link2">
-        <a href="ajuda/ajuda.html">
+        <a href="../banco_login/ajuda.html">
             <p id="cadastrohr"> Ajuda</p>
         </a>
-    </div>
+
 
 </body>
 </html>
@@ -64,20 +68,20 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
         $quant_estoque = addslashes($_POST['quant_estoque']);
         $caixa = addslashes($_POST['caixa']);
         //verificac se o campo esta preenchido
-        if(!empty($nome) && !empty($descricao) && !empty($quant_estoque) && !empty($quant_minima) && !empty($caixa) ){
+        if(!empty($nome) && !empty($descricao) && !empty($quant_estoque)  && !empty($caixa) ){
           $p->conectar("system_guru", "localhost", "root","");//conectando bd
           if($p->MsgErro == "")//se esta tudo certo
              {
-                 if($p->cadastrar($nome,  $descricao, $quant_estoque, $quant_minima, $caixa)){
+                 if($p->cadastrar($nome,  $descricao, $quant_estoque, $caixa)){
                      echo "<script>alert('Cadastrado com Sucesso');</script>";
                  }else{
-                     echo "<script>alert('Este produto já foi cadastrado');</script>";
+                     echo "<script>alert('Ja foi cadastrado');</script>";
                  }
              }else{
                  echo"Erro:" . $u->msgErro;
              }
         }else{
-            echo "<script>alert('Preencha todos os campos');</script>";
+            echo "<script>alert('Prencha todos os campos');</script>";
         }
     }
 

@@ -73,7 +73,7 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
                         </a>
                        
                        
-                           </tr>";
+                           </td>";
                 }
                 ?>
 
@@ -88,7 +88,7 @@ if (!isset($_SESSION['id_usuarios'])) { //caso estiver indefinida,não possui um
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="../PoderAdm/controler.js"></script>
     <div class="link2">
-        <a href="ajuda/ajuda.html">
+        <a href="../banco_login/ajuda.html">
             <p id="cadastrohr"> Ajuda</p>
         </a>
     </div>
